@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – Threadly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="contact">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-banner">
+      <div class="container"><h1>Contact Us</h1><p>Questions about an order or a product? We'd love to help.</p></div>
+    </section>
+
+    <section class="section" style="padding-top:40px">
+      <div class="container contact-grid">
+        <div>
+          <div class="info-card">
+            <h3 style="margin-bottom:18px">Get in touch</h3>
+            <div class="info-item"><span class="emoji">📍</span><div><b>Address</b><br><small>12 Rajpur Road, Dehradun, Uttarakhand 248001</small></div></div>
+            <div class="info-item"><span class="emoji">📞</span><div><b>Phone</b><br><small>+91 98765 43210</small></div></div>
+            <div class="info-item"><span class="emoji">✉️</span><div><b>Email</b><br><small>hello@threadly.example</small></div></div>
+            <div class="info-item"><span class="emoji">🕘</span><div><b>Hours</b><br><small>Mon – Sat, 9:00 AM – 7:00 PM</small></div></div>
+          </div>
+          <div class="map-box">
+            <iframe title="Map of Dehradun" loading="lazy"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=78.00%2C30.29%2C78.10%2C30.35&amp;layer=mapnik"></iframe>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h3 style="margin-bottom:16px">Send us a message</h3>
+          <div class="success-box" id="success" role="status">✅ Thanks! Your message has been sent. We'll reply within 24 hours.</div>
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="field"><label for="name">Full name</label><input id="name" type="text" placeholder="Your name"><span class="error"></span></div>
+              <div class="field"><label for="email">Email</label><input id="email" type="email" placeholder="you@example.com"><span class="error"></span></div>
+            </div>
+            <div class="form-row">
+              <div class="field"><label for="phone">Phone</label><input id="phone" type="tel" placeholder="10-digit number"><span class="error"></span></div>
+              <div class="field">
+                <label for="topic">Topic</label>
+                <select id="topic">
+                  <option value="">Select a topic</option>
+                  <option>Order status</option><option>Returns &amp; refunds</option>
+                  <option>Product question</option><option>Other</option>
+                </select><span class="error"></span>
+              </div>
+            </div>
+            <div class="field"><label for="message">Message</label><textarea id="message" placeholder="How can we help?"></textarea><span class="error"></span></div>
+            <button type="submit" class="btn btn-accent btn-block">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="data.js" defer></script>
+  <script src="main.js" defer></script>
+  <script src="contact.js" defer></script>
+</body>
+</html>

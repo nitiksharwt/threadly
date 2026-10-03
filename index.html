@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Threadly – Everyday Fashion</title>
+  <meta name="description" content="Shop trendy men's, women's and kids' clothing at Threadly.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+  <div id="site-header"></div>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <span class="hero-tag">✨ New Season Collection</span>
+          <h1>Wear your <em>story</em>, every single day.</h1>
+          <p>Comfortable, stylish and affordable clothing for men, women and kids. Discover pieces you'll want to live in.</p>
+          <div class="hero-btns">
+            <a href="shop.html" class="btn btn-accent">Shop Now →</a>
+            <a href="about.html" class="btn btn-outline">Our Story</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="blob"></div>
+          <div class="g g1" id="hero-g1"></div>
+          <div class="g g2" id="hero-g2"></div>
+          <div class="g g3" id="hero-g3"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal"><h2>Shop by Category</h2><p>Find the perfect fit for everyone in the family.</p></div>
+        <div class="cat-grid" id="cat-grid"></div>
+      </div>
+    </section>
+
+    <!-- Featured -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="section-head reveal"><h2>Trending Now</h2><p>Our most loved pieces this month.</p></div>
+        <div class="product-grid" id="featured-grid"></div>
+        <div style="text-align:center;margin-top:30px"><a href="shop.html" class="btn btn-outline">View All Products</a></div>
+      </div>
+    </section>
+
+    <!-- Offer -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="offer reveal">
+          <div>
+            <h2>Festive Sale – up to 30% off</h2>
+            <p>Grab your favourites before the offer ends. Apply the code at checkout.</p>
+            <span class="code">STYLE20</span>
+          </div>
+          <div class="countdown" id="countdown" aria-label="Offer countdown">
+            <div><b id="cd-d">00</b><small>Days</small></div>
+            <div><b id="cd-h">00</b><small>Hrs</small></div>
+            <div><b id="cd-m">00</b><small>Min</small></div>
+            <div><b id="cd-s">00</b><small>Sec</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" style="padding-top:0">
+      <div class="container features">
+        <div class="feature reveal"><div class="emoji">🚚</div><h4>Free Shipping</h4><p>On orders above ₹1,999</p></div>
+        <div class="feature reveal"><div class="emoji">↩️</div><h4>Easy Returns</h4><p>7-day hassle-free returns</p></div>
+        <div class="feature reveal"><div class="emoji">🔒</div><h4>Secure Payment</h4><p>100% protected checkout</p></div>
+        <div class="feature reveal"><div class="emoji">💬</div><h4>24/7 Support</h4><p>We're always here to help</p></div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="section-head reveal"><h2>Happy Customers</h2></div>
+        <div class="testi" id="testi"></div>
+        <div class="dots" id="testi-dots"></div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="container">
+      <div class="newsletter reveal">
+        <h2>Join the Threadly Club</h2>
+        <p>Get early access to sales and 10% off your first order.</p>
+        <form id="news-form" novalidate>
+          <input type="email" id="news-email" placeholder="Enter your email" aria-label="Email address" required>
+          <button class="btn btn-accent" type="submit">Subscribe</button>
+        </form>
+        <span class="error" id="news-msg" style="text-align:center"></span>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="data.js" defer></script>
+  <script src="main.js" defer></script>
+  <script src="home.js" defer></script>
+</body>
+</html>

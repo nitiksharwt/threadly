@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop – Threadly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="shop">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-banner">
+      <div class="container"><h1>Shop</h1><p>Find your next favourite outfit.</p></div>
+    </section>
+
+    <section class="section" style="padding-top:36px">
+      <div class="container shop-layout">
+        <aside class="filters" id="filters" aria-label="Filters">
+          <div class="filter-group">
+            <h4>Search</h4>
+            <input type="search" id="search" class="search-box" placeholder="Search clothes…">
+          </div>
+          <div class="filter-group">
+            <h4>Category</h4>
+            <label><input type="radio" name="cat" value="all" checked> All</label>
+            <label><input type="radio" name="cat" value="men"> Men</label>
+            <label><input type="radio" name="cat" value="women"> Women</label>
+            <label><input type="radio" name="cat" value="kids"> Kids</label>
+            <label><input type="radio" name="cat" value="accessories"> Accessories</label>
+          </div>
+          <div class="filter-group">
+            <h4>Max Price: <span id="price-label">₹3000</span></h4>
+            <input type="range" id="price" min="300" max="3000" step="100" value="3000">
+          </div>
+          <button class="btn btn-outline btn-sm btn-block" id="reset">Reset Filters</button>
+        </aside>
+
+        <div>
+          <div class="shop-top">
+            <button class="btn btn-outline btn-sm filter-toggle" id="filter-toggle">⚙ Filters</button>
+            <span id="result-count" style="color:#6b7280"></span>
+            <select id="sort" class="select" aria-label="Sort products">
+              <option value="featured">Sort: Featured</option>
+              <option value="low">Price: Low to High</option>
+              <option value="high">Price: High to Low</option>
+              <option value="rating">Top Rated</option>
+              <option value="name">Name: A–Z</option>
+            </select>
+          </div>
+          <div class="product-grid" id="shop-grid"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="data.js" defer></script>
+  <script src="main.js" defer></script>
+  <script src="shop.js" defer></script>
+</body>
+</html>

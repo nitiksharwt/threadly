@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart – Threadly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="cart">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-banner">
+      <div class="container"><h1>Shopping Cart</h1><p id="cart-sub">Review your items before checkout.</p></div>
+    </section>
+
+    <section class="section" style="padding-top:40px">
+      <div class="container" id="cart-root"></div>
+    </section>
+  </main>
+
+  <!-- Checkout modal -->
+  <div class="modal" id="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="co-title">
+    <div class="modal-box">
+      <button class="modal-close" id="co-close" aria-label="Close">×</button>
+      <div id="co-form-wrap">
+        <h3 id="co-title" style="margin-bottom:16px">Checkout</h3>
+        <form id="co-form" novalidate>
+          <div class="field"><label for="co-name">Full name</label><input id="co-name" type="text"><span class="error"></span></div>
+          <div class="form-row">
+            <div class="field"><label for="co-email">Email</label><input id="co-email" type="email"><span class="error"></span></div>
+            <div class="field"><label for="co-phone">Phone</label><input id="co-phone" type="tel"><span class="error"></span></div>
+          </div>
+          <div class="field"><label for="co-address">Address</label><textarea id="co-address" style="min-height:80px"></textarea><span class="error"></span></div>
+          <div class="form-row">
+            <div class="field"><label for="co-city">City</label><input id="co-city" type="text"><span class="error"></span></div>
+            <div class="field"><label for="co-pin">PIN code</label><input id="co-pin" type="text" inputmode="numeric" maxlength="6"><span class="error"></span></div>
+          </div>
+          <div class="field">
+            <label for="co-pay">Payment method</label>
+            <select id="co-pay">
+              <option value="cod">Cash on Delivery</option>
+              <option value="upi">UPI</option>
+              <option value="card">Credit / Debit Card</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-accent btn-block" id="co-total-btn">Place Order</button>
+        </form>
+      </div>
+      <div class="order-done" id="co-done" style="display:none">
+        <div class="emoji">🎉</div>
+        <h3 style="margin:8px 0">Order placed!</h3>
+        <p style="color:#6b7280">Thank you, <b id="done-name"></b>. Your order <b id="done-id"></b> is confirmed and will reach you in 3–5 days.</p>
+        <a href="shop.html" class="btn btn-accent" style="margin-top:18px">Continue Shopping</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+
+  <script src="data.js" defer></script>
+  <script src="main.js" defer></script>
+  <script src="cart.js" defer></script>
+</body>
+</html>
